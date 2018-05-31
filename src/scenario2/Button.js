@@ -9,4 +9,4 @@ const Button = ({ type = "primary", children, onClick }) => (
 
 const ButtonWithTrack = withClickTimesTrack(Button);
 
-export { Button as default, ButtonWithTrack };
+export { Button, ButtonWithTrack };

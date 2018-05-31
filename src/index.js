@@ -8,7 +8,7 @@ import "./hof-example";
 // import Button from "./scenario1/Button";
 // import ButtonWithTrack from "./scenario1/ButtonWithTrack";
 
-import { default as Button, ButtonWithTrack } from "./scenario2/Button";
+import { Button, ButtonWithTrack } from "./scenario2/Button";
 
 const App = () => (
   <div class="App container">

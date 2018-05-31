@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-const withClickTimesTrack = Component =>
-  class ComponentWithClickTimesTrack extends Component {
+const withClickTimesTrack = WrappedComponent =>
+  class extends Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -19,9 +19,9 @@ const withClickTimesTrack = Component =>
       const { times } = this.state;
       return (
         <span onClick={this.handleClick}>
-          <Component type={times > 5 ? "danger" : "primary"}>
+          <WrappedComponent type={times > 5 ? "danger" : "primary"}>
             {children} <small>{times} times clicked</small>
-          </Component>
+          </WrappedComponent>
         </span>
       );
     }

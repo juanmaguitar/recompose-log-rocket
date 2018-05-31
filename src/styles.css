@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.App ul {
+  list-style: none;
+  padding: 0;
+}
+.App ul li {
+  margin: 10px;
+}

@@ -9,9 +9,10 @@ import "./hof-example";
 // import ButtonWithTrack from "./scenario1/ButtonWithTrack";
 
 import { Button, ButtonWithTrack } from "./scenario2/Button";
+import { Link, LinkWithTrack } from "./scenario2/Link";
 
 const App = () => (
-  <div class="App container">
+  <div className="App container">
     <h2>Using Recompose to write clean HOCs {"\u2728"}</h2>
 
     <ul>
@@ -24,6 +25,22 @@ const App = () => (
         >
           Click Me
         </ButtonWithTrack>
+      </li>
+      <li>
+        <Link
+          href="https://logrocket.com/"
+          onClick={() => console.log("Link clicked!")}
+        >
+          LogRocket
+        </Link>
+      </li>
+      <li>
+        <LinkWithTrack
+          href="https://logrocket.com/"
+          onClick={() => console.log("LinkWithTrack clicked!")}
+        >
+          Click Me
+        </LinkWithTrack>
       </li>
     </ul>
   </div>

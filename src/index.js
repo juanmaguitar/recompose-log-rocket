@@ -8,8 +8,11 @@ import "./hof-example";
 // import Button from "./scenario1/Button";
 // import ButtonWithTrack from "./scenario1/ButtonWithTrack";
 
-import { Button, ButtonWithTrack } from "./scenario2/Button";
-import { Link, LinkWithTrack } from "./scenario2/Link";
+// import { Button, ButtonWithTrack } from "./scenario2/Button";
+// import { Link, LinkWithTrack } from "./scenario2/Link";
+
+import { Button, ButtonWithTrack } from "./scenario3/Button";
+import { Link, LinkWithTrack } from "./scenario3/Link";
 
 const App = () => (
   <div className="App container">
@@ -29,7 +32,7 @@ const App = () => (
       <li>
         <Link
           href="https://logrocket.com/"
-          onClick={() => console.log("Link clicked!")}
+          onClick={e => !window.confirm("Redirect to LogRocket?") && e.preventDefault() }
         >
           LogRocket
         </Link>

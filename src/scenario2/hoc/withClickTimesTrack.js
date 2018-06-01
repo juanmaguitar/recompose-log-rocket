@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import cleanProps from "react-clean-props";
 
 const withClickTimesTrack = WrappedComponent =>
   class extends Component {
@@ -17,14 +16,13 @@ const withClickTimesTrack = WrappedComponent =>
       onClick && onClick();
     };
     render() {
-      const { children, onClick } = this.props;
+      const { children, onClick, ...props } = this.props;
       const { times } = this.state;
-      const cleanedProps = cleanProps(this.props, { children, onClick });
       return (
         <span onClick={this.handleClick}>
           <WrappedComponent
             type={times > 5 ? "danger" : "primary"}
-            {...cleanedProps}
+            {...props}
           >
             {children} <small>({times} times clicked)</small>
           </WrappedComponent>

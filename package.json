@@ -8,7 +8,8 @@
     "react": "16.3.2",
     "react-clean-props": "1.0.0",
     "react-dom": "16.3.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "recompose": "^0.27.1"
   },
   "devDependencies": {},
   "scripts": {

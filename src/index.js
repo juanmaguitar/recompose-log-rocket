@@ -14,7 +14,7 @@ import "./hof-example";
 // import { Button, ButtonWithTrack } from "./scenario3/Button";
 // import { Link, LinkWithTrack } from "./scenario3/Link";
 
-import { Button, ButtonWithTrack, ButtonWithTrackCountdown } from "./scenario4/Button";
+import { Button, ButtonWithTrack, ButtonWithTrackCountdown, ButtonWithMessages } from "./scenario4/Button";
 import { Link, LinkWithTrack } from "./scenario4/Link";
 
 const App = () => (
@@ -38,6 +38,13 @@ const App = () => (
         >
           Click Me
         </ButtonWithTrackCountdown>
+      </li>
+      <li>
+        <ButtonWithMessages
+          onClick={() => console.log("ButtonWithMessages clicked!")}
+        >
+          Click Me
+        </ButtonWithMessages>
       </li>
       <li>
         <Link

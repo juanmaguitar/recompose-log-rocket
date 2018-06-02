@@ -1,3 +1,5 @@
 export { default as withStateTimes } from './withStateTimes'
 export { default as withHandlerClick } from './withHandlerClick'
 export { default as withDisplayTrack } from './withDisplayTrack'
+export { default as withDidMountStateMessages } from './withDidMountStateMessages'
+export { default as withDisplayMessages } from './withDisplayMessages'

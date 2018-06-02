@@ -1,5 +1,5 @@
 import React from "react";
-import { withStateTimes, withHandlerClick, withDisplayTrack } from "./hoc";
+import { withStateTimes, withHandlerClick, withDisplayTrack, withDidMountStateMessages, withDisplayMessages } from "./hoc";
 import { compose, withState, withHandlers } from "recompose";
 
 const Button = ({ type = "primary", children, onClick }) => (
@@ -30,4 +30,9 @@ const ButtonWithTrackCountdown = compose(
 )(Button)
 
 
-export { Button, ButtonWithTrack, ButtonWithTrackCountdown };
+const ButtonWithMessages = compose(
+  withDidMountStateMessages, 
+  withDisplayMessages
+)(Button)
+
+export { Button, ButtonWithTrack, ButtonWithTrackCountdown, ButtonWithMessages };

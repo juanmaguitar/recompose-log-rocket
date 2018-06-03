@@ -14,7 +14,12 @@ import "./hof-example";
 // import { Button, ButtonWithTrack } from "./scenario3/Button";
 // import { Link, LinkWithTrack } from "./scenario3/Link";
 
-import { Button, ButtonWithTrack, ButtonWithTrackCountdown, ButtonWithMessages } from "./scenario4/Button";
+import {
+  Button,
+  ButtonWithTrack,
+  ButtonWithTrackCountdown,
+  ButtonWithMessages
+} from "./scenario4/Button";
 import { Link, LinkWithTrack } from "./scenario4/Link";
 
 const App = () => (
@@ -43,13 +48,15 @@ const App = () => (
         <ButtonWithMessages
           onClick={() => console.log("ButtonWithMessages clicked!")}
         >
-          Click Me
+          Messages
         </ButtonWithMessages>
       </li>
       <li>
         <Link
           href="https://logrocket.com/"
-          onClick={e => !window.confirm("Redirect to LogRocket?") && e.preventDefault() }
+          onClick={e =>
+            !window.confirm("Redirect to LogRocket?") && e.preventDefault()
+          }
         >
           LogRocket
         </Link>

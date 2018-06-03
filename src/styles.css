@@ -10,3 +10,7 @@
 .App ul li {
   margin: 10px;
 }
+
+button span {
+  margin-left: 5px;
+}

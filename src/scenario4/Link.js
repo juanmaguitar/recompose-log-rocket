@@ -1,6 +1,12 @@
 import React from "react";
-import { withStateTimes, withHandlerClick, withDisplayTrack } from "./hoc";
-import { compose } from "recompose";
+import {
+  withStateTimes,
+  withHandlerClick,
+  withDisplayTrack,
+  withDidMountStateMessages,
+  withDisplayMessages
+} from "./hoc";
+import { compose, defaultProps } from "recompose";
 
 const styles = {
   color: "white",
@@ -23,6 +29,12 @@ const LinkWithTrack = compose(
   withStateTimes,
   withHandlerClick,
   withDisplayTrack
-)(Link)
+)(Link);
 
-export { Link, LinkWithTrack };
+const LinkWithMessages = compose(
+  defaultProps({ type: "info" }),
+  withDidMountStateMessages,
+  withDisplayMessages
+)(Link);
+
+export { Link, LinkWithTrack, LinkWithMessages };

@@ -20,7 +20,7 @@ import {
   ButtonWithTrackCountdown,
   ButtonWithMessages
 } from "./scenario4/Button";
-import { Link, LinkWithTrack } from "./scenario4/Link";
+import { Link, LinkWithTrack, LinkWithMessages } from "./scenario4/Link";
 
 const App = () => (
   <div className="App container">
@@ -68,6 +68,13 @@ const App = () => (
         >
           Click Me
         </LinkWithTrack>
+      </li>
+      <li>
+        <LinkWithMessages
+          onClick={() => console.log("LinkWithMessages clicked!")}
+        >
+          Messages
+        </LinkWithMessages>
       </li>
     </ul>
   </div>

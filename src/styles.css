@@ -11,6 +11,7 @@
   margin: 10px;
 }
 
-button span {
+.badge,
+.fa-spinner {
   margin-left: 5px;
 }

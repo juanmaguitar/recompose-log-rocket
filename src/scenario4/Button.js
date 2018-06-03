@@ -1,5 +1,11 @@
 import React from "react";
-import { withStateTimes, withHandlerClick, withDisplayTrack, withDidMountStateMessages, withDisplayMessages } from "./hoc";
+import {
+  withStateTimes,
+  withHandlerClick,
+  withDisplayTrack,
+  withDidMountStateMessages,
+  withDisplayMessages
+} from "./hoc";
 import { compose, withState, withHandlers } from "recompose";
 
 const Button = ({ type = "primary", children, onClick }) => (
@@ -12,27 +18,34 @@ const ButtonWithTrack = compose(
   withStateTimes,
   withHandlerClick,
   withDisplayTrack
-)(Button)
+)(Button);
 
 const ButtonWithTrackCountdown = compose(
-  withState('times', 'setTimes', 3),
-  withState('type', 'setType', 'primary'),
+  withState("times", "setTimes", 3),
+  withState("type", "setType", "primary"),
   withHandlers({
     handleClick: props => e => {
       let { times, onClick, setTimes, setType } = props;
-      e.preventDefault()
-      if ( times <= 0 ) {  setType('secondary') }
-      else { setTimes( --times ) }
+      e.preventDefault();
+      if (times <= 0) {
+        setType("secondary");
+      } else {
+        setTimes(--times);
+      }
       onClick && onClick();
     }
   }),
   withDisplayTrack
-)(Button)
-
+)(Button);
 
 const ButtonWithMessages = compose(
-  withDidMountStateMessages, 
+  withDidMountStateMessages,
   withDisplayMessages
-)(Button)
+)(Button);
 
-export { Button, ButtonWithTrack, ButtonWithTrackCountdown, ButtonWithMessages };
+export {
+  Button,
+  ButtonWithTrack,
+  ButtonWithTrackCountdown,
+  ButtonWithMessages
+};
